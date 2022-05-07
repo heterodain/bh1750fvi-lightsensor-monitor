@@ -1,0 +1,20 @@
+# デバイス設定
+device:
+  ## 照度センサーの接続設定
+  light-sensor:
+    # シリアル通信ポート名
+    com-port: "COM7"
+
+# サービス設定
+service:
+  ## Ambientのチャネル接続設定
+  ambient:
+    # チャネルID
+    channel-id: 99999
+    # リードキー
+    read-key: "****************"
+    # ライトキー
+    write-key: "****************"
+
+# ログレベル
+#詳細なログを出力する場合にコメントを外す# logging.level.com.heterodain.lightsensor.monitor: TRACE
