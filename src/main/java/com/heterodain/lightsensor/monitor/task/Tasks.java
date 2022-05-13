@@ -86,7 +86,7 @@ public class Tasks {
             try {
                 var sendDatas = new Double[] { average };
                 log.debug(
-                        "Ambientに3分値を送信します。current={}lux",
+                        "Ambientに3分値を送信します。current={} lx",
                         sendDatas[0]);
 
                 ambientService.send(ambientConfig, ZonedDateTime.now(), null, sendDatas);
