@@ -20,7 +20,7 @@ import org.springframework.stereotype.Component;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * グリッドタイインバーター関連の非同期タスク
+ * 非同期タスク
  */
 @Component
 @Slf4j
