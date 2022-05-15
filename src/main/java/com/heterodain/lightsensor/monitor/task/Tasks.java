@@ -20,7 +20,7 @@ import org.springframework.stereotype.Component;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * グリッドタイインバーター関連の非同期タスク
+ * 非同期タスク
  */
 @Component
 @Slf4j
@@ -86,7 +86,7 @@ public class Tasks {
             try {
                 var sendDatas = new Double[] { average };
                 log.debug(
-                        "Ambientに3分値を送信します。current={}lux",
+                        "Ambientに3分値を送信します。current={} lx",
                         sendDatas[0]);
 
                 ambientService.send(ambientConfig, ZonedDateTime.now(), null, sendDatas);
