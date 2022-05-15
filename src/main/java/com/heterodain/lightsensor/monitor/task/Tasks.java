@@ -36,7 +36,7 @@ public class Tasks {
     private AmbientService ambientService;
 
     /** 計測データ(3秒値) */
-    private List<Integer> threeSecDatas = new ArrayList<>();
+    private List<Double> threeSecDatas = new ArrayList<>();
 
     /**
      * 初期化処理
@@ -76,7 +76,7 @@ public class Tasks {
         // 平均値算出
         Double average;
         synchronized (threeSecDatas) {
-            average = threeSecDatas.stream().mapToDouble(d -> (double) d).average().orElse(0D);
+            average = threeSecDatas.stream().mapToDouble(d -> d).average().orElse(0D);
             threeSecDatas.clear();
         }
 

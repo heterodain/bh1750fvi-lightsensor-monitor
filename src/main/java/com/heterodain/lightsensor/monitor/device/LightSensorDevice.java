@@ -50,13 +50,13 @@ public class LightSensorDevice implements Closeable {
      * @return 照度(Lux)
      * @throws IOException
      */
-    public Integer readLux() throws IOException {
+    public Double readLux() throws IOException {
         var command = "GET".getBytes();
         serial.writeBytes(command, command.length);
 
         var line = in.readLine();
         log.trace("Receive: {}", line);
-        return Integer.parseInt(line);
+        return Double.parseDouble(line);
     }
 
     /**
